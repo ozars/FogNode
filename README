@@ -1,0 +1,35 @@
+Group Members:
+- Omer Ozarslan
+- Bhagawat Khatiwada
+
+Platform:
+- Ubuntu
+
+Before compiling:
+>> make clean
+
+To compile:
+>> make all
+
+To run local test case and IoTNodeReqGen:
+>> make testlocal
+
+To run automated test case (Run this on net06, net07 and net08 at the same time.)
+>> make testnet
+
+To stop any instance of FogNode and IoTNodeReqGen:
+>> make kill
+
+To view test logs in gedit (this will open .log file for each node and IoTNodeReqGen.
+If test are ran for a while opening log files in gedit may not be wise due to their size):
+>> make log
+
+To inspect a particular IoT node message in logs:
+>> make inspect SEARCH="REPLACE_WITH_EXPRESSION_TO_SEARCH"
+
+e.g. To inspect a particular IoT node request with sequence number 30 in logs:
+>> make inspect SEARCH="Request{30}"
+
+or short hand:
+>> make inspect SEARCH="{30}"
+
